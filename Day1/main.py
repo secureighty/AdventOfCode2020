@@ -28,9 +28,9 @@ def find_two_target_summands(data_array, targetsum):
         last = data_array[last_index]
         sum = first+last
 
-        if sum > 2020:
+        if sum > targetsum:
             last_index -= 1
-        elif sum < 2020:
+        elif sum < targetsum:
             first_index += 1
         else:
             return [first, last]
