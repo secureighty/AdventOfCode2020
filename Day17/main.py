@@ -1,23 +1,15 @@
 from Day17.Grid import Grid
-import Day17.Cube
+import time
+start_time = time.time()
 
 data = ""
 for line in open("data"):
     data += line
 
-print(data)
+final_grid = Grid(data, 4)
+#Grid(data, 3)
 
-testgrid = Grid(data, 4)
-
-testgrid.print_slice(0, 1, [0, 0, 0, 0])
 for i in range(0, 6):
-    testgrid.cycle()
-    testgrid.print_slice(0, 1, [0, 0, 0, 0])
-
-    print(testgrid.get_active_cube_count())
-
-
-print(testgrid.get_active_cube_count())
-# print(testgrid.get_cube([1,0,0]))
-# for i in range(0, 1):
-#     testgrid.cycle()
+    final_grid.cycle()
+print(final_grid.get_active_cube_count())
+print("--- %s seconds ---" % (time.time() - start_time))
