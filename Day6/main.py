@@ -4,7 +4,7 @@ for line in open("data"):
 
 def part1():
     sum = 0
-    for grouping in datastring.split("\n"):
+    for grouping in datastring.split("\n\n"):
         print(grouping)
         grouping.strip()
         chars = []
